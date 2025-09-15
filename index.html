@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dylan’s Galaxy Space</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      background: black;
+      color: white;
+    }
+
+    /* Background stars */
+    .stars {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: moveStars 200s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveStars {
+      from {background-position: 0 0;}
+      to {background-position: -10000px 5000px;}
+    }
+
+    /* Intro transition */
+    .intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, #0d1b2a, #000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+      animation: fadeOut 4s ease forwards;
+      animation-delay: 3s;
+      z-index: 10;
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      top: 20%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 20px #0ff;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    /* Heart support button */
+    .support-btn {
+      background: none;
+      border: none;
+      font-size: 2.5rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .support-btn:hover {
+      transform: scale(1.3);
+    }
+
+    .support-btn:active {
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Stars background -->
+  <div class="stars"></div>
+
+  <!-- Intro Screen -->
+  <div class="intro">🌌 Welcome to Dylan’s Galaxy 🌌</div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Welcome to Space</h1>
+    <p>Relax, breathe, and enjoy the stars...</p>
+
+    <!-- Support Button -->
+    <button class="support-btn" id="supportBtn">❤️</button>
+  </div>
+
+  <!-- Background music -->
+  <audio autoplay loop id="bg-music">
+    <source src="https://cdn.pixabay.com/audio/2023/03/12/audio_8c87f55a35.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Redirect on heart click
+    document.getElementById("supportBtn").addEventListener("click", function() {
+      window.location.href = "https://www.roblox.com/share?code=5203894c19acbb4ab28ec9de4e71a806&type=Server";
+    });
+  </script>
+
+</body>
+</html>
